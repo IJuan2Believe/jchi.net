@@ -1,0 +1,173 @@
+/* this makes the background*/
+body{
+background: linear-gradient(hwb(48 66% 0%), #ffdaaa);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+margin: 0; 
+} 
+
+*{
+  box-sizing: border-box;
+}
+ 
+p{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    font-family: "consolas" , "sans-serif";
+    text-align: center;
+    border-style: solid;
+}
+ 
+
+
+h1{
+color: black;
+font-family: "Jersey 15", "consolas" , "sans-serif";
+font-size: 50px;
+text-align:left;
+margin:0px; 
+
+opacity: 0;
+animation-name: fade-in;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+}
+
+/*  this class makes text be centered*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* this makes it so that the visited links are not purple*/ 
+a:visited{
+    color:rgb(0, 0, 0);
+}
+
+
+/* Navbar */
+
+ 
+
+.tiny_navbar_image {
+  width: 45px;
+  height: auto;
+  border-radius: 20px; 
+  padding-left: 15px;
+ 
+}
+
+
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Ensures the navbar stays on top of other content */
+  opacity: 0.8;
+  font-family: "Consolas", "sans-serif";
+  background-color: hsl(0, 0%, 0%); /* Background color for navbar */
+  padding: 10px 0;
+  border-radius: 20px; /* Optional: gives a rounded edge to the navbar */
+}
+
+
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Enables Flexbox for the navbar */
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center; /* centers the items */
+  gap: 20px; /* Controls the space between items */
+}
+
+ 
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  border-radius: 10px; /* Optional: round the corners of the links */
+}
+
+.navbar a:hover {
+  color: rgb(0, 0, 0);
+  background-color: hwb(48 66% 0%);
+  border-radius: 60px; /* Optional: adds a rounded effect on hover */
+}
+
+
+/* this is an animation for the title of the page 
+ Fade in animation 
+*/
+
+@keyframes fade-in {
+100%{opacity: 1;}
+}
+
+/*  this are the website layout settings */ 
+
+aside{
+width: 20%;
+float: left;
+padding: 5px;
+}
+
+
+section{
+  width: 40%;
+  float: left;
+  padding:5px;
+}
+
+article{
+  width: 40%;
+  float: left;
+  padding: 5px;
+}
+
+ 
+/*  this is the animation for my greeting text*/ 
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.typing-animation {
+  font-family: "Pixelify Sans", monospace;
+  animation: typing 2s steps(27) forwards, blink 0.3s step-end 4 alternate, hide-cursor 0s 2.4s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 46ch;  
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hide-cursor {
+  to { border-color: transparent; }
+}
